@@ -6,10 +6,10 @@
       "series": "3212",
       "number": "324231",
       "date": "2022-09-15",
-      "oldDoc": false,
+      "oldDoc": true,
       "organization": 3,
       "code": "31232112",
-      "mainDoc": true
+      "mainDoc": null
     },
     {
       "id": 1662962756750,
@@ -20,7 +20,7 @@
       "oldDoc": false,
       "organization": 2,
       "code": "312412",
-      "mainDoc": true
+      "mainDoc": null
     },
     {
       "id": 1663014928579,
@@ -31,6 +31,50 @@
       "oldDoc": true,
       "organization": 2,
       "code": "123123",
+      "mainDoc": null
+    },
+    {
+      "id": 1663071204911,
+      "type": "international_passport",
+      "series": "1231",
+      "number": "123125",
+      "date": "2022-09-08",
+      "oldDoc": false,
+      "organization": 2,
+      "code": "234342",
+      "mainDoc": true
+    },
+    {
+      "id": 1663071978401,
+      "type": "passport",
+      "series": "5122",
+      "number": "213123",
+      "date": "2022-09-16",
+      "oldDoc": false,
+      "organization": 2,
+      "code": "412321",
+      "mainDoc": true
+    },
+    {
+      "id": 1663072135708,
+      "type": "passport",
+      "series": "2131",
+      "number": "312312",
+      "date": "2022-09-08",
+      "oldDoc": true,
+      "organization": 1,
+      "code": "214512",
+      "mainDoc": true
+    },
+    {
+      "id": 1663072179316,
+      "type": "passport",
+      "series": "2423",
+      "number": "324242",
+      "date": "2022-06-15",
+      "oldDoc": true,
+      "organization": 2,
+      "code": "234234",
       "mainDoc": true
     }
   ],

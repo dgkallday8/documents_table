@@ -70,6 +70,8 @@ export class FiltersComponent implements OnInit {
       }
 
       if (!this.filtersForm.controls.number.value && this.filtersForm.controls.type.value) {
+        console.log(field.type)
+        console.log(this.filtersForm.controls.type.value)
         return field.type === this.filtersForm.controls.type.value
       }
 

@@ -67,7 +67,7 @@ export class ModalComponent implements OnInit {
         oldDoc: this.modalForm.value.oldDoc || false,
         organization: this.modalForm.value.organization || '',
         code: this.modalForm.value.code || '',
-        mainDoc: this.modalForm.value.mainDoc || true
+        mainDoc: this.modalForm.value.mainDoc || null
       })
       .pipe(untilDestroyed(this))
       .subscribe(() => {
@@ -89,7 +89,7 @@ export class ModalComponent implements OnInit {
         oldDoc: this.modalForm.value.oldDoc || false,
         organization: this.modalForm.value.organization || '',
         code: this.modalForm.value.code || '',
-        mainDoc: this.modalForm.value.mainDoc || true
+        mainDoc: this.modalForm.value.mainDoc || null
       })
       .pipe(untilDestroyed(this))
       .subscribe(() => {

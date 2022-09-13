@@ -52,12 +52,6 @@ export class TableComponent implements OnInit {
     this._dataService.documentId.next(id);
   }
 
-  public sortingByColumn(sort: Sort) {
-    console.log(sort)
-    // @ts-ignore
-    this.dataSource.data = this.dataSource.data.sort((a, b) => a.number - b.number)
-  }
-
   public sortData(sort: Sort) {
     const data = this.dataSource.data.slice();
     if (!sort.active || sort.direction === '') {

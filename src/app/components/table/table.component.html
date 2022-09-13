@@ -4,9 +4,7 @@
     <th mat-header-cell *matHeaderCellDef></th>
     <td mat-cell *matCellDef="let rowValue">
       <div [style.width.px]="10">
-        <mat-icon
-          *ngIf="rowValue.id === selectedDocumentId"
-        >check</mat-icon>
+        <mat-icon *ngIf="rowValue.mainDoc">check</mat-icon>
       </div>
     </td>
   </ng-container>
@@ -45,6 +43,7 @@
     mat-row
     *matRowDef="let myRowData; columns: columnsToDisplay"
     [class.selected]="myRowData.id === selectedDocumentId"
+    [class.old_document]="myRowData.oldDoc"
     (click)="selectDocument(myRowData.id)"
   ></tr>
 
