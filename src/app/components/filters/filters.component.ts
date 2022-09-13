@@ -64,6 +64,7 @@ export class FiltersComponent implements OnInit {
   }
 
   public search() {
+    this._dataService.documents.next(this._dataService.initialDocuments.value)
     const filteredData = this._dataService.documents.value.filter((field: DocumentValue) => {
       if (this.filtersForm.controls.number.value && !this.filtersForm.controls.type.value) {
         return field.number?.includes(this.filtersForm.controls.number.value);

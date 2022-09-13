@@ -65,17 +65,6 @@
       "organization": 1,
       "code": "214512",
       "mainDoc": true
-    },
-    {
-      "id": 1663072179316,
-      "type": "passport",
-      "series": "2423",
-      "number": "324242",
-      "date": "2022-06-15",
-      "oldDoc": true,
-      "organization": 2,
-      "code": "234234",
-      "mainDoc": true
     }
   ],
   "types": [
