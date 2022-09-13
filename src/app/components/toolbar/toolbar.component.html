@@ -1,0 +1,30 @@
+<div class="toolbar">
+  <div class="buttons">
+    <app-button
+      text="Добавить"
+      bgColor="#FFFF00"
+      textColor="#000"
+      (click)="addDocument()"
+    ></app-button>
+    <app-button
+      class="ml-10"
+      text="Редактировать"
+      bgColor="#0000FF"
+      [canDisabled]="true"
+      (click)="editDocument(selectedDocumentId)"
+    ></app-button>
+    <app-button
+      class="ml-10"
+      text="Удалить"
+      bgColor="#FF0000"
+      [canDisabled]="true"
+      (click)="remove(selectedDocumentId)"
+    ></app-button>
+  </div>
+  <div class="checkbox" [formGroup]="form">
+    <mat-checkbox
+      formControlName="onlyActive"
+      (change)="showOnlyActive($event)"
+    >Показать архивные</mat-checkbox>
+  </div>
+</div>

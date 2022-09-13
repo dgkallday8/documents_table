@@ -1,0 +1,85 @@
+<div class="modal">
+  <div class="modal-header">
+    <p>Документ</p>
+    <mat-icon mat-dialog-close>close</mat-icon>
+  </div>
+  <div class="modal-form" [formGroup]="modalForm">
+    <div class="form-row">
+      <mat-checkbox
+        formControlName="mainDoc"
+      >Основной документ</mat-checkbox>
+
+      <mat-checkbox
+        formControlName="oldDoc"
+      >Архивный документ</mat-checkbox>
+    </div>
+    <div class="form-row">
+      <mat-form-field>
+        <mat-label>Вид документа</mat-label>
+        <mat-select formControlName="type">
+          <mat-option
+            *ngFor="let type of types"
+            [value]="type.value"
+          >{{ type.name }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Серия</mat-label>
+        <input
+          type="text"
+          mask="999999"
+          [attr.maxlength]="4"
+          matInput
+          formControlName="series"
+        />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Номер</mat-label>
+        <input
+          type="text"
+          mask="999999"
+          [attr.maxlength]="6"
+          matInput
+          formControlName="number"
+        />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Дата выдачи:</mat-label>
+        <input type="date" matInput formControlName="date" />
+      </mat-form-field>
+    </div>
+
+    <div class="form-row">
+      <mat-form-field class="wide">
+        <mat-label>Организация, выдавшая документ</mat-label>
+        <mat-select formControlName="organization">
+          <mat-option
+            *ngFor="let org of organizations"
+            [value]="org.id"
+          >{{ org.name }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Код подразделения</mat-label>
+        <input mask="999-999" type="text" matInput formControlName="code" />
+      </mat-form-field>
+    </div>
+    <div class="form-row">
+      <app-button
+        bgColor="#00F"
+        text="Сохранить"
+        [disableHandlerValue]="disableHandler"
+        (click)="docId ? editDoc(docId) : addDoc()"
+      ></app-button>
+      <app-button
+        text="Выход"
+        mat-dialog-close
+        textColor="#000"
+      ></app-button>
+    </div>
+  </div>
+</div>

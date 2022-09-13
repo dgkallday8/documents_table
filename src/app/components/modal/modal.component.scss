@@ -1,0 +1,27 @@
+@import "src/app/scss/main";
+
+.modal {
+  width: 800px;
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #00f;
+    color: #fff;
+  }
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-form {
+  padding: 20px 10px;
+}
+
+.wide {
+  width: 500px;
+}

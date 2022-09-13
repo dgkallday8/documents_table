@@ -1,0 +1,9 @@
+<button
+  class="button"
+  [style.background-color]="bgColor"
+  [style.color]="textColor"
+  [class.not-active]="!selectId && canDisabled || disableHandlerValue"
+  [disabled]="!selectId && canDisabled"
+>
+  {{ text }}
+</button>

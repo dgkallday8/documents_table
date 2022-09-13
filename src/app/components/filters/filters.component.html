@@ -1,0 +1,34 @@
+<div class="filters">
+  <form class="form" [formGroup]="filtersForm">
+    <mat-form-field class="select">
+      <mat-label>Вид документа</mat-label>
+      <mat-select formControlName="type">
+        <mat-option
+          *ngFor="let type of types"
+          [value]="type.id"
+        >{{ type.name }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Номер</mat-label>
+      <input type="text" matInput formControlName="number" />
+    </mat-form-field>
+  </form>
+
+  <div class="buttons">
+    <app-button
+      text="Найти"
+      class="mr-10"
+      bgColor="#0000FF"
+      (click)="search()"
+    >
+    </app-button>
+    <app-button
+      text="Очистить"
+      bgColor="#FF0000"
+      (click)="resetFilters()"
+    >
+    </app-button>
+  </div>
+</div>
